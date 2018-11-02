@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Data Table</title>
+	<link rel="shortcut icon" href="images/m.ico" type="image/x-icon" />
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/dataTables.bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section id="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="registerform">
+						<div class="panel panel-primary">
+      						<div class="panel-heading">
+      							<h4><a class="btn btn-danger btn-sm" href="form.html">User Registration</a>
+                                                 &emsp;&emsp;&emsp;&emsp;
+                                                 User Information</h4>
+      						</div>
+      							<div class="panel-body table-responsive">
+      								<table class="table table-striped" id="myTable">
+      									<thead>
+      										<tr class="danger"">
+      											<th>Name</th>
+      											<th>Gender</th>
+      											<th>Age</th>
+      										</tr>
+      									</thead>
+      									<tbody>
+      										<tr>
+      											<td>Mehedi Hasan</td>
+      											<td>Male</td>
+      											<td>23</td>
+      										</tr>
+                                                                  <tr>
+                                                                        <td>Neymar Jr</td>
+                                                                        <td>Male</td>
+                                                                        <td>26</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Marcelo</td>
+                                                                        <td>Male</td>
+                                                                        <td>30</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Marta</td>
+                                                                        <td>Female</td>
+                                                                        <td>32</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Philippe Coutinho</td>
+                                                                        <td>Male</td>
+                                                                        <td>26</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Oliveira</td>
+                                                                        <td>Female</td>
+                                                                        <td>27</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Alisson Becker</td>
+                                                                        <td>Male</td>
+                                                                        <td>26</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Dias Gomes</td>
+                                                                        <td>Female</td>
+                                                                        <td>31</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Erika</td>
+                                                                        <td>Female</td>
+                                                                        <td>30</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Arthur Melo</td>
+                                                                        <td>Male</td>
+                                                                        <td>22</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Thaisa</td>
+                                                                        <td>Female</td>
+                                                                        <td>29</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                        <td>Thiago Silva</td>
+                                                                        <td>Male</td>
+                                                                        <td>34</td>
+                                                                  </tr>
+      									</tbody>
+      								</table>
+      							</div>
+    						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/jquery.dataTables.js"></script>
+	<script src="js/dataTables.bootstrap.js"></script>
+
+      <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable({
+                //bFilter: false,
+                "language": {
+                    "info": "(_START_ to _END_) of _TOTAL_ peoples",
+                    "paginate": {
+                        "next": '&raquo;',
+                        "previous": '&laquo;'
+                    },
+                    "sLengthMenu": "_MENU_ records",
+                    "sSearch": "Find"
+                },
+                "aLengthMenu": [[5, 10, -1], [5, 10, "All"]],
+                "iDisplayLength": 5
+            });
+        });
+      </script>
+</body>
+</html>
